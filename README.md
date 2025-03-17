@@ -1,0 +1,2 @@
+# js-project
+practice purpose
