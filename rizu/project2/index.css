@@ -1,0 +1,447 @@
+
+        html{
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+          /*  background: linear-gradient(to bottom, #a2d2ff, #d0f0fd);*/
+            color: #333;
+            transition: background 0.5s;
+            height: 100%;
+            position: relative;
+            padding-top: 50px;
+        }   
+        body {
+            background: linear-gradient(300deg,deepskyblue,#7cdaff,rgb(43, 142, 248),#ffffff,#009aff);
+  background-size: 240% 240%;
+  animation: gradient 24s ease infinite;
+        /* 	height: 100vh; */
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 90% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* water wave */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.content {
+    position: absolute;
+    top: 75px;
+    right: 0px;
+    left: 0px;
+}
+
+.content h2 {
+    position: absolute;
+    top: 50px;
+    font-size: 6em;
+}
+
+.content h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+}
+
+.content h2:nth-child(2) {
+    color: #03a9f4;
+    animation: animate 4s ease-in-out infinite;
+}
+
+.content1 h2 {
+    position: absolute;
+    transform: translate(45%, -50%);
+    font-size: 1em;
+}
+
+.content1 h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 0.5px #03a9f4;
+}
+
+.content1 h2:nth-child(2) {
+    color: #03a9f4;
+    animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate {
+    0%,
+    100% {
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0% 100%, 16% 70%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 800%, 0% 900%);
+    }
+    25%,75% {
+        clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+
+@media(max-width: 768px) {
+    .content h2 {
+        font-size: 4em;
+    }
+    .content h2:nth-child(1) {
+        color: transparent;
+        -webkit-text-stroke: 1px #03a9f4;
+    }
+}
+@media(max-width: 500px) {
+    .content h2 {
+        font-size: 2.5em;
+    }
+  
+}
+
+@media(max-height: 700px) {
+    .content {
+        top: 50px;
+
+    }
+  
+}
+@media(min-height: 1300px) {
+    .content {
+        top: 100px;
+
+    }
+  
+}
+
+        h1, h2 {
+            color: #fff;
+            /* font-weight: bold; */
+            /* background: linear-gradient(135deg, rgb(152, 2, 121) 0%, rgb(22, 7, 50) 46%, rgb(0, 212, 255) 100%); */
+        }
+        
+        
+        input{
+            max-width: 350px !important;
+            border-radius: 30px !important;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .step-container {
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .step-container img {
+            width: 120px;
+            margin: 20px 0;
+        }
+
+       
+
+        #profile {
+            background: linear-gradient(to bottom, #ffb6b9, #fcb69f);
+        }
+
+        .nav-link {
+            color: #fff !important;
+        }
+
+        .nav-link:hover {
+            color: #f1c40f !important;
+        }
+
+        .gender-image {
+            width: 200px;
+            margin: 10px auto;
+            display: block;
+        }
+
+        /* home banner */
+        #home {
+            display: flex;
+            height: 100%;
+            width: 100%;
+
+        }
+        .home_div{
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            /* background: url(./images/play_hydrate.gif); */
+            background: url(./images//lady_beach.gif);
+            background-position: center;
+            background-size: cover;
+            filter: brightness(50%);
+            background-repeat: no-repeat;
+        }
+
+        .banner_text{
+            margin: auto 10px;
+            width: 100%;
+        }
+        .banner_text p{
+            color: white;
+        }
+
+        .headline{
+            font-weight: bold;
+            /* word-spacing: -12.9px; */
+            font-size: 35px;
+           }
+        .head_line_color{
+            background-size: 100%;
+            font-weight: bold;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+            background-image: linear-gradient(135deg, rgba(244,0,194,1) 0%, rgba(22,0,147,1) 47%, rgba(0,255,222,1) 100%);
+        }
+        /* navbar */
+        .navbar{
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1;
+            background: linear-gradient(180deg, rgba(2,142,240,1) 0%, rgba(86,63,217,1) 47%);
+        }
+
+        /* button */
+        .button-2 {
+        color: #fff;
+        border-radius: 13px !important;
+        border: 3px solid #021848;
+        background-image: -webkit-linear-gradient(30deg, #1b1775 50%, transparent 50%);
+        background-image: linear-gradient(30deg, #021848 50%, transparent 50%);
+        background-size: 500px;
+        background-repeat: no-repeat;
+        background-position: 0%;
+        -webkit-transition: background 300ms ease-in-out;
+        transition: background 300ms ease-in-out;
+        background-image: border-box;
+        }
+        .button-2:hover {
+        background-position: 100%;
+        color: #000000;
+        border: 0px;
+        transform: scale(1.1);
+        transition:  700ms ;
+        background-color: white;
+        }
+
+        /* sign up */
+        .sign_up{
+            background: linear-gradient(to bottom, #a2d2ff, #d0f0fd);
+        }
+        
+
+        /* gender */
+        .gender_btn{
+            width: 125px;
+            height: 125px;
+           
+        }
+        .selected-gender {
+            /* background-color: #007bff !important; */
+        border: 5px solid blue;
+        /* color: white; */
+        font-weight: bolder;
+        border-radius: 10px;
+        z-index: 10;
+        transition: 0.3s;
+    }
+        .gender_div{
+            display: flex;
+            justify-content: center;
+            /* transition: 500ms ease-out; */
+            padding: 10px;
+        }
+
+        .step-container{
+            width: 100%;
+            margin: auto 0px;
+        }
+       
+        .male{
+            background: url(./images/boy.png);
+            
+        }
+        .male:hover{
+            background: url(./images/boy-size-unscreen.gif) !important;
+            transition: 500ms cubic-bezier(0.42, 0, 0, 0.94);
+        }
+        .female{
+            background: url(./images/girl.png);
+        }
+        .female:hover{
+            background: url(./images/girl-size-unscreen.gif) !important;
+            transition: 500ms cubic-bezier(0.42, 0, 0, 0.94);
+        }
+        .back{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* footer section */
+        footer {
+            background-color: #003366;
+            color: #fff;
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .footer_line{
+            width: 100%;
+        }
+
+
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+:root {
+  --border-color: #144fc6;
+  --fill-color: #6ab3f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+ /* background-color: #3494e4;*/
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#water_reminder h1 {
+  margin: 10px 0 0;
+  color: var(--border-color);
+}
+
+#water_reminder h3 {
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.cup {
+  background-color: #fff;
+  border: 4px solid var(--border-color);
+  color: var(--border-color);
+  border-radius: 0 0 40px 40px;
+  height: 330px;
+  width: 150px;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cup.cup-small {
+  height: 95px;
+  width: 50px;
+  border-radius: 0 0 15px 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+  transition: 0.3s ease;
+}
+
+.cup.cup-small.full {
+  background-color: var(--fill-color);
+  color: #fff;
+}
+
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+}
+
+.remained {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  transition: 0.3s ease;
+}
+
+.remained span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.remained small {
+  font-size: 12px;
+}
+
+.percentage {
+  background-color: var(--fill-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+  height: 0;
+  transition: 0.3s ease;
+}
+
+.text {
+  text-align: center;
+  margin: 0 0 5px;
+}
+
+.plus-minus {
+  border-radius: 30%;
+  border: 3px solid #144fc6 ;
+  color: #144fc6;
+  font-size: x-large;
+}
+
+
+        /* width less then 500px */
+        @media(max-width:500px)
+        {
+            .home_div{
+                background: url(./images/wall_water1.gif) ;
+                background-position: bottom;
+            }
+            .headline
+            {
+                font-size: 25px;
+            }
+            .banner_text p{
+                font-size: 10px;
+            }
+        }
+    
+
+        .alrem {
+            box-shadow: 5px -5px 5px -5px #333;
+          }

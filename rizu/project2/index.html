@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Reminder App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet" />
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> -->
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
+    
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+        <div class="container cont">
+            <a class="navbar-brand" href="#home"> 
+                <div class="content1 d-flex justify-content-center">
+                    <h2>WATER REMINDER</h2>
+                    <h2>WATER REMINDER</h2>      
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home" onclick="showSection('home')">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#profile" onclick="showSection('profile')">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sections -->
+    
+      <div class="cont h-100 ">
+        <div class="home_div">
+            
+        </div>
+        <div id="home" class="container text-center py-5" data-aos="fade-up">
+            <div class="banner_text">
+                <div class="content d-flex justify-content-center">
+                    <h2>STAY HYDRATE</h2>
+                    <h2>STAY HYDRATE</h2>      
+                </div>
+                <h1 class="headline head_line_color">Welcome to Your Personal Hydration Assistant</h1>
+                <p class="mb-3">Stay hydrated and healthy. I'll remind you when to drink water!</p>
+                <button class=" rounded btn py-2 px-3 button button-2 mt-3" onclick="showSection('signup')" >sign up</button>
+                </div>
+        </div>
+        
+        <footer class="text-center py-3">
+            <div class="footer_line">
+                <p>&copy; 2025 Water Reminder App</p>
+            </div>
+        </footer>
+        
+        <!-- <button class=" rounded btn py-2 px-3 button button-2 mt-3" onclick="showSection('signup')" >sign up</button> -->
+      </div>
+    
+
+    
+
+    <!-- <div class="sign_up h-100 d-flex"> -->
+        <div id="signup" class="container cont py-5 hidden h-100 " data-aos="fade-up">
+            
+            <div class="d-flex h-100">
+                <div class="m-auto">
+                    <h2 class="head_line_color text-center py-4">Hi, I'm your personal hydration assistant!</h2>
+        
+                <div class="row h-100">
+                    <div class="col-lg-8 p-2 col-md-6 sign-up-left m-auto">
+                        <div>
+                            <img src="./images/hydrate2.jpg" class="img-fluid rounded-5"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 p-2 m-auto">
+                        <div class="step-container">
+                            <p>Let's get started by filling in your credentials.</p>
+                            <form id="signup-form">
+                                <div class="mb-3 d-flex flex-column align-items-center">
+                                    <label for="username" class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="username" required>
+                                    <small id="username-error" class="text-danger"></small> <!-- Error message -->
+                                </div>
+                                <div class="mb-3 d-flex flex-column align-items-center">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <small id="email-error" class="text-danger"></small> <!-- Error message -->
+                                </div>
+                                <button type="submit" class="btn btn-primary rounded-pill py-2 px-4 m-3">Next</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+    
+        </div>
+    <!-- </div> -->
+
+    <!-- <div id="gender" class="container cont text-center py-5 h-100 hidden " data-aos="fade-up">
+        <div class="d-flex h-100">
+            <div class="step-container">
+                <h2 class="head_line_color bold py-4 ">Select Your Gender</h2>
+                <div class="row">
+                    <div class="col-sm-2">
+    
+                    </div>
+                    <div class="col-sm-4 gender_div ">
+                        <div class="p-4 rounded-circle gender_div_1">
+                            <div class="gender_btn male back ">
+                                <div class=" btn-outline-primary h-100 w-100" onclick="setGender('Male')">
+                                </div>
+                                <p class="text-center">MALE</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 gender_div ">
+                        <div class="p-4 rounded-circle gender_div_1">
+                        <div class="gender_btn female back ">
+                            <div class=" btn-outline-primary h-100 w-100" onclick="setGender('Female')">
+                            </div>
+                            <p class="text-center">FEMALE</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-2">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="gender" class="container cont text-center py-5 h-100 hidden" data-aos="fade-up">
+        <div class="d-flex h-100">
+            <div class="step-container">
+                <h2 class="head_line_color bold py-4">Select Your Gender</h2>
+                <div class="row justify-content-center">
+                    <div class="col-sm-5 ">
+                        <div class="gender_div d-block">
+                            <div class="p-4 rounded-circle gender_div_1 d-inline-block border-dark border " id="gender_div_11">
+                                <div class="gender_btn male back" onclick="setGender('Male')">
+                                    <div id="male-option" class="btn-outline-primary h-100 w-100">
+                                        <!-- <p class="text-center">MALE</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-center">MALE</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-5">
+                        <div class="gender_div d-block">
+                            <div class="p-4 rounded-circle gender_div_1 d-inline-block border-dark border" id="gender_div_12">
+                                <div class="gender_btn female back" onclick="setGender('Female')">
+                                    <div id="female-option" class="btn-outline-primary h-100 w-100">
+                                        <!-- <p class="text-center">FEMALE</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-center">FEMALE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button id="back" class="btn btn-primary py-2 px-4 m-3 rounded-pill" onclick="showSection('signup')" >Back</button>
+                    <button id="gender-next-btn" class="btn btn-primary m-3 rounded-pill py-2 px-4 m-3" onclick="showSection('weight')" disabled>Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="weight" class="container cont text-center py-5 h-100  hidden" data-aos="fade-up">
+        <div class="d-flex h-100">
+            <div class="step-container row">
+                <div class="col-lg-4 col-md-6 p-2 m-auto "> 
+                    <h2 class="head_line_color">Enter Your Weight</h2>
+                    <div class="d-flex justify-content-center">
+                        <!-- <img id="weight-image" class="gender-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIq-HKxyNuYHwH29OaZ9XHz6wFRyGVVUzuJnn3V7cCAxLmXdQArPaWMvI7PO33LuUAsCU&usqp=CAU" alt="Weight"> -->
+                    </div>
+                    <input type="range" id="weight-input" class="scroll-bar" min="30" max="150" value="60" step="1" oninput="updateWeightValue()">
+                    <p>Weight: <span id="weight-value">60</span> kg</p>
+                    <div class="d-flex justify-content-center">
+                        <button id="back" class="btn btn-primary py-2 px-4 m-3 rounded-pill" onclick="showSection('gender')" >Back</button>
+                        <button class="btn btn-primary m-3 rounded-pill py-2 px-4 m-3" onclick="showSection('wakeTime')">Next</button>
+                    </div>
+                </div>
+                <div class="col-lg-8 p-2 col-md-6 sign-up-left m-auto d-flex justify-center">
+                    <img src="./images/wweight.png" class="img-fluid rounded-5 w-100"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wakeTime" class="container cont text-center h-100 py-5 hidden" data-aos="fade-up">
+        <div class="d-flex h-100">
+            <div class="row">
+                <div class="col-lg-8 p-2 col-md-6 sign-up-left m-auto d-flex justify-center">
+                    <img src="./images/wake-up.png" class="img-fluid rounded-5 w-100"/>
+                </div>
+                <div class="col-lg-4 col-md-6 p-2 m-auto ">
+                    <div class="step-container">
+                        <h2 class="head_line_color">Select Your Wake-Up Time</h2>
+                        <!-- <img id="wakeup-image" class="gender-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIq-HKxyNuYHwH29OaZ9XHz6wFRyGVVUzuJnn3V7cCAxLmXdQArPaWMvI7PO33LuUAsCU&usqp=CAU" alt="Wake-Up"> -->
+                       <div class="d-flex justify-content-center">
+                        <input type='time' id='wake-time' class="form-control">
+                        <!-- <input type="time" id="wake-time" class="form-control" required> -->
+                       </div>
+                    </div>
+                    <div class="m-3 d-flex justify-content-center">
+                        <button id="back" class="btn btn-primary m-3 rounded-pill py-2 px-4 m-3" onclick="showSection('weight')" >Back</button>
+                        <input type='button' value='Next' id='check' class="btn py-2 px-4 m-3 btn-primary">
+                    </div>
+                    <!-- <button class="btn btn-primary mt-3" onclick="showSection('bedTime')">Next</button> -->
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+    </div>
+
+
+    <div id="bedTime" class="container cont text-center py-5 h-100 hidden" data-aos="fade-up">
+        <div class="d-flex h-100">
+         <div class="row w-100">
+             <div class="col-lg-8 p-2 col-md-6 sign-up-left m-auto d-flex justify-content-center">
+                 <img src="./images/sleep.png" class="img-fluid rounded-5 "/>
+             </div>
+             <div class="col-lg-4 col-md-6 p-2 m-auto ">
+                 <div class="step-container">
+                     <h2 class="head_line_color">Select Your Bed Time</h2>
+                    <div class="d-flex justify-content-center">
+                        <!-- <input type="time" id="bed-time" class="form-control" required> -->
+                        <input type='time' id='bed-time' class="form-control">
+                    </div>
+                 </div>
+                 <div class="m-3b d-flex justify-content-center">
+                    <button id="back" class="btn btn-primary m-3 rounded-pill py-2 px-4 m-3" onclick="showSection('wakeTime')" >BakK</button>
+                    <input type='button' value='Next' id='check2' class="btn py-2 px-4 m-3 btn-primary">
+                </div>
+             <!-- <button class="btn btn-primary mt-3" onclick="showSection('summary')">Next</button> -->
+             </div>
+         </div>
+        </div>
+     </div>
+     
+
+    <div id="summary" class="container cont text-center py-5 h-100 hidden" data-aos="fade-up">
+        <div class="d-flex h-100">
+            <div class="step-container">
+                <h2 class="head_line_color">Your Hydration Plan is Ready!</h2>
+                <p>Don't worry, I'll remind you on time to drink water.</p>
+                <p>Profile Summary:</p>
+                <p>Username: <span id="summary-username"></span></p>
+                <p>Email: <span id="summary-email"></span></p>
+                <p>Gender: <span id="summary-gender"></span></p>
+                <p>Weight: <span id="summary-weight"></span> kg</p>
+                <p>Wake-Up Time: <span id="summary-wake-time"></span></p>
+                <p>Bed Time: <span id="summary-bed-time"></span></p>
+                <p>water required: <span id="summary-water-req"></span></p>
+                <div class="d-flex justify-content-center">
+                    <button id="back" class="btn btn-primary rounded-pill py-2 px-4 m-3" onclick="showSection('bedTime')" >Back</button>
+                    <button class="btn btn-primary py-2 px-4 m-3 rounded-pill" id="sum_btn" >Save Profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="water_reminder" class="container cont text-center py-5 h-100 hidden">
+        <h1>Drink Water</h1>
+        <h3>Goal: <span id="goal">2</span> Liters</h3>
+       <div class="d-md-flex d-sm-block justify-content-around">
+        <div>
+            <div>
+                <button id="minus" class = "plus-minus px-4">-</button>
+                <button id="plus" class = "plus-minus px-4">+</button>
+            </div>
+          
+          <div class="d-flex justify-content-center">
+              <div class="cup">
+                  <div class="remained" id="remained">
+                    <span id="liters"></span>
+                    <small>Remained</small>
+                  </div>
+            
+                  <div class="percentage" id="percentage"></div>
+                </div>
+          </div>
+       </div>
+    
+        <div>
+            <p class="text">Select how many glasses of water you have drank :</p>
+    
+        <div class="d-flex justify-content-center">
+            <div id = "cups" class="cups">
+              </div>
+        </div>
+        </div>
+       </div>
+    
+        <!-- <script src="script.js"></script> -->
+    </div>
+    <div>
+        <div id="alarm-notification" class="alrem" style="display:none; position: fixed; top: 30%; left: 50%; transform: translateX(-50%); background-color: #f44033; color: white; padding: 20px; border-radius: 10px; text-align: center;">
+            <p>Alarm is ringing!</p>
+            <button id="stop-alarm-btn" class="rounded-pill" style="padding: 10px 20px; background-color: white; color: #f44336; border: none; border-radius: 5px;">Stop Alarm</button>
+        </div>
+        <audio id="sound">
+            <source src="./images/bell.mp3" type="audio/mpeg">
+          </audio>
+    </div>
+
+    
+
+    
+
+    <script>
+        const userProfile = {};
+        const sound = document.getElementById('sound');
+        let count = 0;
+        let alrm = 0;
+        const alarmNotification = document.getElementById('alarm-notification');
+        const stopAlarmBtn = document.getElementById('stop-alarm-btn');
+        let Day_Hours,timePerInterval,intervals;
+
+       
+
+        // Function to set reminders for drinking water
+        function startWaterReminder() {
+        
+        let waterPerInterval = 250; // Water to drink per interval in ml
+
+        // Calculate the number of intervals
+         intervals = Math.ceil(userProfile.waterRequired / waterPerInterval);
+        console.log(`Number of intervals: ${intervals}`);
+
+        // Calculate the time per interval (interval in minutes)
+        timePerInterval = userProfile.differenceInMinutes / intervals;
+        console.log(`Time per interval: ${timePerInterval} minutes`);
+
+           
+        }
+
+        function showSection(sectionId) {
+            document.querySelectorAll('.cont').forEach(section => section.classList.add('hidden'));
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+        function setGender(gender) {
+        userProfile.gender = gender;
+
+        // Get the elements
+    const maleDiv = document.getElementById("gender_div_11");
+    const femaleDiv = document.getElementById("gender_div_12");
+
+    // Remove the 'selected-gender' class from both
+    maleDiv.classList.remove("selected-gender");
+    maleDiv.classList.add("border");
+    femaleDiv.classList.remove("selected-gender");
+    femaleDiv.classList.add("border");
+
+    // Add the 'selected-gender' class to the selected option
+    if (gender === 'Male') {
+        maleDiv.classList.add("selected-gender");
+        maleDiv.classList.remove("border");
+    } else {
+        femaleDiv.classList.add("selected-gender");
+        femaleDiv.classList.remove("border");
+    }
+        // Enable the "Next" button after selection
+        document.getElementById("gender-next-btn").disabled = false;
+
+        // Update images based on selection
+        const genderImage = gender === 'Male'
+            ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEhVw9dcAQoNFKKtrf7D_LYNDNqUnB7q8pLG4HRk9e8x5mMKf40ldaANlU24Bc6qY2iFY&usqp=CAU'
+            : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeHPaeDxSslL9gn29v-HYUWfiQByH9QOkrwklX5TT2khKr2iMVSw9h6y8nCJfUikZzU5A&usqp=CAU';
+
+        document.getElementById('weight-image').src = genderImage;
+        document.getElementById('wakeup-image').src = genderImage;
+        document.getElementById('bedtime-image').src = genderImage;
+    }
+
+        function updateWeightValue() {
+        const weight = document.getElementById('weight-input').value;
+        document.getElementById('weight-value').textContent = weight;
+        userProfile.weight = weight;
+
+        }
+
+         // Ensure the weight value is set on page load
+         document.addEventListener("DOMContentLoaded", function() {
+        updateWeightValue();
+    });
+
+    function validateAndShowSummary() {
+        const bedTimeInput = document.getElementById('bed-time');
+        
+        // Check if the bed time input is empty
+        if (bedTimeInput.value == "") {
+            // If the input is empty, alert the user to select a bedtime
+            alert("Please select your bedtime.");
+            return; // Stop the function here if validation fails
+        }
+        console.log(bedTimeInput.value)
+        // If the input is filled, call the function to hide the current section and show the next
+        showSection('summary');
+    }
+
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent page reload
+
+        // Fetch values
+        let usernameInput = document.getElementById('username').value.trim();
+        let emailInput = document.getElementById('email').value.trim();
+
+        let usernameError = document.getElementById('username-error');
+        let emailError = document.getElementById('email-error');
+
+        // Clear previous errors
+        usernameError.innerText = "";
+        emailError.innerText = "";
+
+        let valid = true; // Track if the form is valid
+
+        // Username validation
+        if (usernameInput === "") {
+            usernameError.innerText = "Username is required.";
+            valid = false;
+        } else if (usernameInput.length < 3) {
+            usernameError.innerText = "Username must be at least 3 characters long.";
+            valid = false;
+        }
+
+        // Email validation using regex
+        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (emailInput === "") {
+            emailError.innerText = "Email is required.";
+            valid = false;
+        } else if (!emailPattern.test(emailInput)) {
+            emailError.innerText = "Enter a valid email address.";
+            valid = false;
+        }
+
+        if (!valid) return; // Stop if validation fails
+
+        // Store values in userProfile object
+        userProfile.username = usernameInput;
+        userProfile.email = emailInput;
+
+        // Log values for debugging
+        console.log("Username:", userProfile.username);
+        console.log("Email:", userProfile.email);
+
+        // Move to next section
+        showSection('gender');
+    });
+
+    document.getElementById('sum_btn').addEventListener('click', function(e) {
+        goal = userProfile.waterRequired/1000;
+        document.getElementById("goal").innerText = goal.toFixed(2);
+        document.getElementById('liters').innerText = `${goal}L`;
+        totalCups = intervals;
+        createCups(); 
+        updateBigCup();
+        showSection('water_reminder');
+    })
+
+         //   <!-- time -->
+     document.querySelector('#check').addEventListener('click', function()
+     {
+     document.getElementById('wake-time').style.border = "solid 1px #ccc";
+     if(checkValid()){
+        let tim =  document.getElementById('wake-time').value
+        userProfile.wakeTime = tim;
+
+       //alert(tim);
+       showSection('bedTime')
+     }else{
+       //alert('Invalid');
+     document.getElementById("wake-time").style.border = "solid 1px red";  
+     }
+         
+     }, false);
+     
+    
+
+     function checkValid(){
+     var timeVal = document.querySelector('#wake-time').value;
+     if (timeVal.match(/\d+:\d+/))
+        return true;
+     else
+         return false;
+     }
+
+
+     document.querySelector('#check2').addEventListener('click', function()
+     {
+     document.getElementById('bed-time').style.border = "solid 1px #ccc";
+     if(checkValid2()){
+         let tim =  document.getElementById('bed-time').value;
+         userProfile.bedTime = tim;
+         document.getElementById('summary-username').textContent = userProfile.username;
+         document.getElementById('summary-email').textContent = userProfile.email;
+         document.getElementById('summary-gender').textContent = userProfile.gender;
+         document.getElementById('summary-weight').textContent = userProfile.weight;
+         document.getElementById('summary-wake-time').textContent = userProfile.wakeTime;
+         document.getElementById('summary-bed-time').textContent = userProfile.bedTime;
+         water_measure();
+         document.getElementById('summary-water-req').textContent = userProfile.waterRequired;
+         startWaterReminder();
+       showSection('summary');
+     }else{
+       //alert('Invalid');
+     document.getElementById("bed-time").style.border = "solid 1px red";  
+     }
+         
+     }, false);
+
+     function checkValid2(){
+        var timeVal = document.querySelector('#bed-time').value;
+        if (timeVal.match(/\d+:\d+/))
+           return true;
+        else
+            return false;
+        }
+    
+
+        function water_measure() {
+            console.log(123);
+        
+            // Assuming userProfile.wakeTime and userProfile.bedTime are in HH:mm format (24-hour)
+            let wakeTime = new Date(`1970-01-01T${userProfile.wakeTime}:00`);
+            let bedTime = new Date(`1970-01-01T${userProfile.bedTime}:00`);
+            
+            // Handle the case where bedTime is past midnight (e.g., 01:00 after waking up at 08:00)
+            if (bedTime < wakeTime) {
+                bedTime.setDate(bedTime.getDate() + 1); // Move to next day
+            }
+            
+            // Calculate wake-up and bed hours
+            let wakeHours = wakeTime.getHours(); // Hour at wake up
+            let bedHours = bedTime.getHours(); // Hour at bed time
+        
+            // Calculate the number of hours of sleep (difference between bedTime and wakeTime)
+             Day_Hours = (bedTime - wakeTime) / (1000 * 60 * 60); // Convert milliseconds to hours
+        
+            // Log the results
+            console.log(`Wake-up time: ${wakeHours}:00`);
+            console.log(`Bed time: ${bedHours}:00`);
+            console.log(`day duration: ${Day_Hours.toFixed(2)} hours`);
+            let differenceInMinutes = getTimeDifferenceInMinutes(userProfile.wakeTime,userProfile.bedTime);
+            userProfile.differenceInMinutes = differenceInMinutes;
+                    console.log(`Time difference: ${userProfile.differenceInMinutes} minutes`);
+        
+            // Calculate water requirement based on weight
+            let waterRequired = userProfile.weight * 35;
+            userProfile.waterRequired = waterRequired;
+            console.log(`Water required: ${waterRequired} ml`);
+            
+        }
+    
+        stopAlarmBtn.addEventListener('click', function() {
+            alrm = 0; // Stop the alarm when user clicks the button
+            alarmNotification.style.display = 'none'; // Hide the notification
+            console.log("Alarm stopped.");
+        });
+
+        function getTimeDifferenceInMinutes(wakeTime, bedTime) {
+            // Convert wakeTime and bedTime from 'HH:mm' format to Date objects
+            let wakeDate = new Date(`1970-01-01T${wakeTime}:00`);
+            let bedDate = new Date(`1970-01-01T${bedTime}:00`);
+        
+            // Handle the case where bedTime is past midnight (e.g., 01:00 AM after 11:00 PM)
+            if (bedDate < wakeDate) {
+                bedDate.setDate(bedDate.getDate() + 1); // Adjust to the next day
+            }
+        
+            // Calculate the difference in milliseconds
+            let timeDifferenceMillis = bedDate - wakeDate;
+        
+            // Convert milliseconds to minutes
+            let timeDifferenceMinutes = Math.floor(timeDifferenceMillis / (1000 * 60));
+        
+            return timeDifferenceMinutes;
+        }
+        
+
+        setInterval(function() {
+            let time = new Date();
+            let hours = time.getHours();
+            let mins = time.getMinutes();
+        
+            if (userProfile.wakeTime) {
+                let [hours_i_w, minutes_i_w] = userProfile.wakeTime.split(':');
+                hours_i_w = parseInt(hours_i_w, 10);
+                minutes_i_w = parseInt(minutes_i_w, 10);
+        
+                if (((hours > hours_i_w)) || (hours === hours_i_w && mins >= minutes_i_w)) {
+                    count++;
+        
+                    if (alrm == 1) {
+                        console.log("Playing sound...");
+                        sound.play();
+        
+                        // Show the notification with the Stop Alarm button
+                        alarmNotification.style.display = 'block'; 
+        
+                        // Play the sound and show the alert-like notification
+                        //alert("Alarm ringing...");
+                        //alrm = 0; // Reset alarm after playing sound
+                    }
+                    //console.log(timePerInterval * 60);
+        
+                    if (count > (timePerInterval * 60)) {
+                        alrm = 1;
+                        count = 0;
+                    }
+                    console.log(alrm, count);
+                    
+                }
+            }
+        }, 1000);
+
+        // function saveToDatabase() {
+        //     fetch('save_profile.php', {
+        //         method: 'POST',
+        //         headers: { 'Content-Type': 'application/json' },
+        //         body: JSON.stringify(userProfile)
+        //     })
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         if (data.success) alert('Profile saved successfully!');
+        //         else alert('Failed to save profile.');
+        //     })
+        //     .catch(error => console.error('Error:', error));
+        // }
+
+        const listers = document.getElementById('liters');
+const percentage = document.getElementById('percentage');
+const remained = document.getElementById('remained');
+const minus = document.getElementById('minus');
+const plus = document.getElementById('plus');
+const smallCups = document.querySelectorAll('.cup-small');
+const cups = document.getElementById("cups");
+//converting NodeList from querySelectorAll() to an array
+let smallCupsArr = Array.from(smallCups);
+let goal = 2;
+let totalCups = 8;
+
+
+minus.addEventListener("click", () => updateGoal("-"));
+plus.addEventListener("click", () => updateGoal("+"));
+
+function updateGoal(sign) {
+   
+    //take plus or minus string sign
+    if (sign == "+" && goal < 4.75) {
+        goal += 0.25;
+        addCup();
+    }
+    else if (sign == "-" && goal > 1.3){ 
+        goal -= 0.25;
+        deleteCup();
+    }
+    document.getElementById("goal").innerText = goal.toFixed(2);
+    listers.innerText = `${goal}L`;
+    updateBigCup();
+    console.log(smallCupsArr);
+
+}
+
+function createCups() {
+    for (let i = 0; i < totalCups; i++) {
+        const newCup = document.createElement("div");
+        newCup.classList.add("cup", "cup-small");
+        newCup.innerText = "250 ml";
+        newCup.addEventListener("click", () => highlightCups(i));
+        cups.appendChild(newCup);
+        smallCupsArr.push(newCup);
+    }
+}
+
+const addCup = () => {
+    const newCup = document.createElement('div');
+    newCup.classList.add("cup", "cup-small");
+    const newContent = document.createTextNode("250 ml");
+    newCup.appendChild(newContent);
+    const INDEX = smallCupsArr.length;
+    newCup.addEventListener('click', () => highlightCups(INDEX))
+    cups.appendChild(newCup);
+    smallCupsArr.push(newCup);
+}
+
+const deleteCup = () => {
+    cups.removeChild(cups.lastChild);
+    smallCupsArr.pop();
+}
+
+updateBigCup()
+
+
+smallCupsArr.forEach((cup, idx) => {
+    cup.addEventListener('click', () => highlightCups(idx))
+})
+
+function highlightCups(idx) {
+    if (idx === smallCupsArr.length - 1 && smallCupsArr[idx].classList.contains("full")) idx--;
+    else if(smallCupsArr[idx].classList.contains('full') && !smallCupsArr[idx].nextElementSibling.classList.contains('full')) {
+        idx--
+    }
+
+    smallCupsArr.forEach((cup, idx2) => {
+        if(idx2 <= idx) {
+            cup.classList.add('full')
+        } else {
+            cup.classList.remove('full')
+        }
+    })
+
+    updateBigCup()
+}
+
+function updateBigCup() {
+    const fullCups = document.querySelectorAll('.cup-small.full').length;
+    const totalCups = smallCupsArr.length;
+
+    if(fullCups === 0) {
+        percentage.style.visibility = 'hidden'
+        percentage.style.height = 0
+    } else {
+        percentage.style.visibility = 'visible'
+        percentage.style.height = `${fullCups / totalCups * 330}px`
+        percentage.innerText = `${Math.round(fullCups / totalCups * 100)}%`
+    }
+
+    if(fullCups === totalCups) {
+        remained.style.visibility = 'hidden'
+        remained.style.height = 0
+    } else {
+        remained.style.visibility = 'visible'
+        listers.innerText = `${(goal - (250 * fullCups / 1000)).toFixed(2)}L`
+    }
+}
+        
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>
